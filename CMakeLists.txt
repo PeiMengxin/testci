@@ -1,4 +1,4 @@
-cmake_minimum_required(2.8)
+#cmake_minimum_required(2.8)
 
 project(testci)
 
