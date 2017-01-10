@@ -12,5 +12,8 @@ install:
   - make install_deps
   - source setup.bash
   - make && sudo make install && sudo ldconfig
-
+  - wget https://sourceforge.net/projects/aruco/files/2.0.16/aruco-2.0.16.zip/download -O aruco.zip
+  - unzip aruco.zip
+  - cd aruco && mkdir build && cd build && cmake .. && make -j4 && sudo make install && sudo ldconfig
+ 
 script: cmake . && make
