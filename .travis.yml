@@ -13,7 +13,6 @@ install:
   - source setup.bash
   - make -j8 && sudo make install && sudo ldconfig
   - sudo apt-get update && sudo apt-get install libcv-dev
-  - cd ~ && wget https://sourceforge.net/projects/aruco/files/2.0.16/aruco-2.0.16.zip/download -O aruco.zip
-  - unzip aruco.zip
+  - pushd testci && ls
   
 script: cmake . && make && ./testci
