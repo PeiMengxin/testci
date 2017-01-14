@@ -5,14 +5,13 @@ compiler:
 os:
 - linux
 
-install:
-  - wget https://github.com/PeiMengxin/serial/archive/master.zip -O serial.zip
-  - unzip serial.zip
-  - cd serial-master 
-  - make install_deps
-  - source setup.bash
-  - make -j8 && sudo make install && sudo ldconfig
-  - sudo apt-get update && sudo apt-get install libcv-dev
-  - pushd testci && ls
-  
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.9
+    - gcc-4.9
+    - cmake-3.4
+
 script: cmake . && make && ./testci
