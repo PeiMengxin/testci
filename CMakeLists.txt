@@ -1,5 +1,5 @@
 message("CMAKE_VERSION:${CMAKE_VERSION}")
-cmake_minimum_required(CMAKE_VERSION 2.8)
+cmake_minimum_required(VERSION 2.8)
 project(testci)
 
 macro(use_cxx11)
