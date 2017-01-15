@@ -6,5 +6,7 @@ os:
 - linux
 dist:
 - trusty
+before_install:
+  - ./install_deps.sh
 
 script: cmake . && make && ./testci
