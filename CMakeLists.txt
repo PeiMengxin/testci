@@ -13,6 +13,6 @@ macro(use_cxx11)
   endif ()
 endmacro(use_cxx11)
 
-# use_cxx11()
+use_cxx11()
 
 add_executable(${PROJECT_NAME} testci.cpp)

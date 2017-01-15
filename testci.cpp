@@ -12,8 +12,8 @@ int main()
     {
         v.push_back(i);
     }
-    // auto it = v.begin();
-    cout<<v[3]<<endl;
+    auto it = v.begin();
+    cout<<*(it+2)<<endl;
 
     return 0;
 }
