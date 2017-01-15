@@ -5,13 +5,8 @@ compiler:
 os:
 - linux
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - g++-4.8
-    - gcc-4.8
-    - cmake
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y g++-5.3
 
 script: cmake . && make && ./testci
