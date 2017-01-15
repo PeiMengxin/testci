@@ -7,6 +7,6 @@ os:
 dist:
 - trusty
 before_install:
-  - sudo source ./install_deps.sh
+  - sudo bash ./install_deps.sh
 
 script: cmake . && make && ./testci
